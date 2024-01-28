@@ -1,4 +1,9 @@
- ## ЗАПУСКАТЬ СКРИПТЫ ОТ ПОЛЬЗОВАТЕЛЯ ROOT
+ <!---Пример кода-->
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Computer+science+student)](https://git.io/typing-svg)
+
+> [!CAUTION] 
+> ## ЗАПУСКАТЬ СКРИПТЫ ОТ ПОЛЬЗОВАТЕЛЯ ROOT
+
 
 ### Установка Prometheus:
 
@@ -40,14 +45,14 @@
 
 ### Настройка Dashboard
 
-    # Create dashboard
-    # + - Import
-    # https://grafana.com/grafana/dashboards
-    # paste ID - Load
-
-    # Import
-    # Prometheus - выбрать data source
-    # Import
+* Create dashboard
+* Import
+  
+* [Node Exporter Full](https://grafana.com/grafana/dashboards/1860-node-exporter-full) / [Node Exporter Dashboard EN 20201010-StarsL.cn](https://grafana.com/grafana/dashboards/11074-node-exporter-for-prometheus-dashboard-en-v20201010/)
+* paste ID - Load
+* Import
+* Prometheus - выбрать data source
+* Import
 
 
 #
