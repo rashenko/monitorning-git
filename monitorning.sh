@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Копируем конфиг службы node exporter
 cp /home/qqee/monitorning-git/node_exporter.service /etc/systemd/system/node_exporter.service
 
