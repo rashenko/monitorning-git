@@ -38,6 +38,18 @@
     # URL http://localhost:9090
     # Save & test
 
+### Настройка Dashboard
+
+    # Create dashboard
+    # + - Import
+    # https://grafana.com/grafana/dashboards
+    # paste ID - Load
+
+    # Import
+    # Prometheus - выбрать data source
+    # Import
+
+
 #
 
 ### Установка Node Exporter:
