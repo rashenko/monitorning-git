@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIR='/etc/systemd/network/'
-DIR1='/home/qqee/backend2-git/10-eth.network'
+DIR1='/home/qqee/monitorning-git/10-eth.network'
 DIR2='/etc/systemd/network/10-eth.network'
 
 # Копируем конфиг
