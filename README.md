@@ -69,6 +69,11 @@
    
 * #### Запустить скрипт [networkd_static_ip.sh](https://github.com/rashenko/monitorning-git/blob/main/networkd_static_ip.sh), он настроит статический ip
 
-### 2. Prometheus, node exporter, Grafana:
+### 2. Prometheus, Grafana:
    
-* #### Запустить скрипт [monitorning.sh](https://github.com/rashenko/monitorning-git/blob/main/monitorning.sh), он скопирует конфиги и перезапустит сервисы 
+* #### Запустить скрипт [monitorning.sh](https://github.com/rashenko/monitorning-git/blob/main/monitorning.sh), он скопирует конфиги и перезапустит сервисы
+
+### 3. Установка node_exporter :
+   
+* #### Запустить скрипт [node_exporter.sh](https://github.com/rashenko/monitorning-git/blob/main/node_exporter.sh), он установит и настроит node_exporter
+#
