@@ -16,19 +16,6 @@
     tar xzvf prometheus-*.t*gz
 #
 
-   > #Добавляем пользователей
-    
-    useradd --no-create-home --shell /usr/sbin/nologin prometheus
-#
-   > #Создаём папки и копируем файлы
-   
-    mkdir {/etc/,/var/lib/}prometheus
-    cp -vi prometheus-*.linux-amd64/prom{etheus,tool} /usr/local/bin
-    cp -rvi prometheus-*.linux-amd64/{console{_libraries,s},prometheus.yml} /etc/prometheus/
-    chown -Rv prometheus: /usr/local/bin/prom{etheus,tool} /etc/prometheus/ /var/lib/prometheus/
-    
-#
-
 ### Установка Node Exporter:
 
    > #Скачиваем Node Exporter
@@ -39,16 +26,6 @@
     
     tar xzvf node_exporter-*.t*gz
 #
-   > #Добавляем пользователей
-
-    useradd --no-create-home --shell /bin/false node_exporter
-#
-   > #Копируем файлы в /usr/local
-    
-    cp node_exporter-*.linux-amd64/node_exporter /usr/local/bin
-    chown node_exporter: /usr/local/bin/node_exporter
-
-#  
 
 ### Установка Grafana:
 
@@ -63,7 +40,7 @@
     sudo dpkg -i grafana_10.0.3_amd64.deb
 
 #
- ### Настройка Grafana:
+ ### Настройка Grafana (в браузере):
 
     # Confuguration - Data sources
     # Add data source - Prometheus
