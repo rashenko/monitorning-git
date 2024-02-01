@@ -14,3 +14,6 @@ systemctl start prometheus
 
 # Включаем автозапуск сервиса Prometheus
 systemctl enable prometheus
+
+# Проверяем статус сервиса Prometheus
+systemctl status prometheus
