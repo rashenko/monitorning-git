@@ -1,5 +1,3 @@
-#/etc/systemd/system/prometheus.service
-
 [Unit]
 Description=Prometheus Monitoring
 Wants=network-online.target
