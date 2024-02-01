@@ -53,6 +53,10 @@
 
    > # Создаём папки и копируем файлы GRAFANA SCRIPT
 
+   > #Добавляем пользователей
+ 
+    useradd --no-create-home --shell /usr/sbin/nologin prometheus
+#
     mkdir {/etc/,/var/lib/}prometheus
 #
     cp -vi prometheus-*.linux-amd64/prom{etheus,tool} /usr/local/bin
