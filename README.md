@@ -26,6 +26,17 @@
     
     tar xzvf node_exporter-*.t*gz
 #
+   > #Добавляем пользователей
+   
+    useradd --no-create-home --shell /bin/false node_exporter
+#
+
+   > #Копируем файлы в /usr/local
+
+    cp node_exporter-*.linux-amd64/node_exporter /usr/local/bin
+#    
+    chown node_exporter: /usr/local/bin/node_exporter
+#
 
 ### Установка Grafana:
 
@@ -38,34 +49,35 @@
    > #Устанавливаем Grafana
     
     sudo dpkg -i grafana_10.0.3_amd64.deb
-# Запуск
-systemctl daemon-reload
-systemctl start grafana-server
-systemctl status grafana-server
 #
- ### Настройка Grafana (в браузере):
 
-    # Confuguration - Data sources
+   > # Создаём папки и копируем файлы GRAFANA SCRIPT
+
+    mkdir {/etc/,/var/lib/}prometheus
+#
+    cp -vi prometheus-*.linux-amd64/prom{etheus,tool} /usr/local/bin
+ #
+    cp -rvi prometheus-*.linux-amd64/{console{_libraries,s},prometheus.yml} /etc/prometheus/
+#
+    chown -Rv prometheus: /usr/local/bin/prom{etheus,tool} /etc/prometheus/ /var/lib/prometheus/
+#
+    
+ ### Настройка Grafana (в браузере):
+ 
+    # Connection - Data sources
     # Add data source - Prometheus
     # URL http://localhost:9090
     # Save & test
 
 ### Настройка Dashboard
 
-* Create dashboard
-* Import
-  
+* Dashboard - New - Import
 * [Node Exporter Full](https://grafana.com/grafana/dashboards/1860-node-exporter-full) / [Node Exporter Dashboard EN 20201010-StarsL.cn](https://grafana.com/grafana/dashboards/11074-node-exporter-for-prometheus-dashboard-en-v20201010/)
 * paste ID - Load
 * Import
 * Prometheus - выбрать data source
 * Import
-
-
 #
-
-
-
  
 ### НАСТРОЙКА MONITORNING
 ### 1. Настраиваем статические ip адреса:
