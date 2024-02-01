@@ -16,6 +16,23 @@
     tar xzvf prometheus-*.t*gz
 #
 
+   > #Добавляем пользователей
+ 
+    useradd --no-create-home --shell /usr/sbin/nologin prometheus
+#
+   > #Создаём папки и копируем конфиги
+
+    mkdir {/etc/,/var/lib/}prometheus
+#
+    cp -vi prometheus-*.linux-amd64/prom{etheus,tool} /usr/local/bin
+ #
+    cp -rvi prometheus-*.linux-amd64/{console{_libraries,s},prometheus.yml} /etc/prometheus/
+#
+    chown -Rv prometheus: /usr/local/bin/prom{etheus,tool} /etc/prometheus/ /var/lib/prometheus/
+
+
+
+
 ### Установка Node Exporter:
 
    > #Скачиваем Node Exporter
@@ -50,21 +67,6 @@
     
     sudo dpkg -i grafana_10.0.3_amd64.deb
 #
-
-   > # Создаём папки и копируем конфиги
-
-   > #Добавляем пользователей
- 
-    useradd --no-create-home --shell /usr/sbin/nologin prometheus
-#
-    mkdir {/etc/,/var/lib/}prometheus
-#
-    cp -vi prometheus-*.linux-amd64/prom{etheus,tool} /usr/local/bin
- #
-    cp -rvi prometheus-*.linux-amd64/{console{_libraries,s},prometheus.yml} /etc/prometheus/
-#
-    chown -Rv prometheus: /usr/local/bin/prom{etheus,tool} /etc/prometheus/ /var/lib/prometheus/
-#
     
  ### Настройка Grafana (в браузере):
  
@@ -88,11 +90,16 @@
    
 * #### Запустить скрипт [networkd_static_ip.sh](https://github.com/rashenko/monitorning-git/blob/main/networkd_static_ip.sh), он настроит статический ip
 
-### 2. Prometheus, Grafana:
-   
-* #### Запустить скрипт [monitorning.sh](https://github.com/rashenko/monitorning-git/blob/main/monitorning.sh), он скопирует конфиги и перезапустит сервисы
-
-### 3. Установка node_exporter :
+### 2. Установка node_exporter :
    
 * #### Запустить скрипт [node_exporter.sh](https://github.com/rashenko/monitorning-git/blob/main/node_exporter.sh), он установит и настроит node_exporter
+
+### 3. Prometheus:
+   
+* #### Запустить скрипт [monitorning.sh](https://github.com/rashenko/monitorning-git/blob/main/monitorning.sh), он скопирует конфиги и перезапустит сервис
+
+### 4. Grafana:
+* #### Запустить скрипт [grafana_script.sh](https://github.com/rashenko/monitorning-git/blob/main/grafana_script.sh), он перезапустит сервис
+
+
 #
