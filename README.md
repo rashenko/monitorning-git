@@ -67,7 +67,18 @@
     
     sudo dpkg -i grafana_10.0.3_amd64.deb
 #
-    
+> #Запуск Grafana
+
+    systemctl daemon-reload
+#
+    systemctl start grafana-server
+#
+
+> #Проверка статуса Grafana
+
+    systemctl status grafana-server
+#
+
  ### Настройка Grafana (в браузере):
  
     # Connection - Data sources
